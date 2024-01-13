@@ -7,11 +7,12 @@ export default function TabOneScreen() {
     <ScrollView style={styles.scrollView}>
     <View style={styles.container}>
       <View style ={{flexDirection: "row"}}>
-        <Text style={styles.title}>Welcome, Wan Azlin</Text>
-        <Image style={styles.iC2}
+      <Image style={styles.iC2}
                source={require("../../assets/images/alin.jpg")} /> 
+        <Text style={styles.title}>Welcome, Wan Azlin</Text>
+      
       </View>
-      <Text style={styles.title2}>Saturday, 13 Jan 2024</Text>
+      
       <Image style={styles.banner}
                source={require("../../assets/images/banner.jpg")} />
       <View style ={{flexDirection: "row"}}>
@@ -75,10 +76,69 @@ export default function TabOneScreen() {
           horizontal={true}
           showsHorizontalScrollIndicator={false}>
           <View style={styles.box1}>
-
-
+             <Text style={styles.title10} >Recipe</Text>
           </View>
-          
+          <View style={styles.box2}>
+             <Text style={styles.title11} >Sports</Text>
+          </View>
+        
+          <View style={styles.box2}>
+             <Text style={styles.title11} >Fashion</Text>
+          </View>
+          <View style={styles.box2}>
+             <Text style={styles.title11} >Health</Text>
+          </View> 
+        </ScrollView>
+        <ScrollView
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}>
+          <View style={styles.box3}>
+            <Image style={styles.fimg}
+               source={require("../../assets/images/fimg1.jpg")} />
+               <Text style={styles.title12} >Chicken Roast</Text>
+          </View>
+          <View style={styles.box3}>
+          <Image style={styles.fimg}
+               source={require("../../assets/images/fimg2.jpg")} />
+               <Text style={styles.title12} >Salad Popiah</Text>
+          </View>
+          <View style={styles.box3}>
+          <Image style={styles.fimg}
+               source={require("../../assets/images/fimg3.jpg")} />
+               <Text style={styles.title12} >Chicken Rice</Text>
+          </View>
+        </ScrollView>
+        <Text style={styles.title4}>Be More Than Superwomen</Text>
+        <Image style={styles.banner1}
+               source={require("../../assets/images/women.png")} />
+        <Text style={styles.title4}>Our Certified Buddies</Text>
+        <ScrollView
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}>
+          <View style={styles.box3}>
+            <Image style={styles.pimg}
+               source={require("../../assets/images/av10.png")} />
+               <Text style={styles.title12} >Dr Raziah</Text>
+               <Text style={styles.title13} >Befrienders</Text>
+          </View>
+          <View style={styles.box3}>
+          <Image style={styles.pimg}
+               source={require("../../assets/images/av11.png")} />
+               <Text style={styles.title12} >Dr Shakila</Text>
+               <Text style={styles.title13} >Befrienders</Text>
+          </View>
+          <View style={styles.box3}>
+          <Image style={styles.pimg}
+               source={require("../../assets/images/av13.png")} />
+               <Text style={styles.title12} >Dr Mariam</Text>
+               <Text style={styles.title13} >Befrienders</Text>
+          </View>
+          <View style={styles.box3}>
+          <Image style={styles.pimg}
+               source={require("../../assets/images/av15.png")} />
+               <Text style={styles.title12} >Dr Sarah</Text>
+               <Text style={styles.title13} >Befrienders</Text>
+          </View>
         </ScrollView>
     </View>
     </ScrollView>
@@ -94,15 +154,15 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFFFFF"
   },
   title: {
-    fontSize: 25,
+    fontSize: 20,
     fontWeight: 'bold',
     marginLeft: 20,
-    paddingTop: 30,
+    paddingTop: 35,
   },
   title2: {
     fontSize: 15,
     color:"#757373",
-    marginLeft: 20,
+    marginLeft: 100,
     paddingBottom: 10,
   },
   title3: {
@@ -147,16 +207,36 @@ const styles = StyleSheet.create({
     marginLeft: 100,
     paddingTop: 20,
   },
+  title10: {
+    fontSize: 20,
+    color:"#FFFFFF",
+    marginLeft: 20,
+    paddingTop: 5,
+  },
+  title11: {
+    fontSize: 20,
+    color:"#EF6E7A",
+    marginLeft: 20,
+    paddingTop: 5,
+  },
+ 
   iC2: {
     width: 60,
     height: 60,
-    marginLeft: 90,
-    marginTop:15,
+    marginLeft: 15,
+    marginTop:18,
     borderRadius: 50,
   },
   banner:{
     width: 400,
     height: 180,
+    alignSelf: 'center',
+    borderRadius: 10,
+    marginTop: 10,
+  },
+  banner1:{
+    width: 400,
+    height: 190,
     alignSelf: 'center',
     borderRadius: 10,
     marginTop: 10,
@@ -198,11 +278,53 @@ const styles = StyleSheet.create({
   },
   box1:{
     borderWidth: 2,
-    color:"#EF6E7A",
-    width: 50,
-    height: 30,
-    borderRadius: 10,
+    borderColor:"#EF6E7A",
+    width: 100,
+    height: 40,
+    borderRadius: 20,
     marginLeft: 10,
     marginTop: 10,
-  }
+    backgroundColor: "#EF6E7A",
+  },
+  box2:{
+    borderWidth: 2,
+    borderColor:"#EF6E7A",
+    width: 100,
+    height: 40,
+    borderRadius: 20,
+    marginLeft: 10,
+    marginTop: 10,
+    
+  },
+  fimg:{
+    width: 140,
+    height: 130,
+    marginLeft: 10,
+    marginTop:15,
+    borderRadius:  5,
+  },
+  box3:{
+
+  },
+  title12: {
+    fontSize: 15,
+    color:"#EF6E7A",
+   textAlign:'center',
+    paddingTop: 5,
+    fontWeight: 'bold'
+  },
+  title13: {
+    fontSize: 13,
+    
+    textAlign:'center',
+    paddingTop: 5,
+    
+  },
+  pimg:{
+    width: 100,
+    height: 100,
+    marginLeft: 10,
+    marginTop:15,
+    borderRadius: 50,
+  },
 });
