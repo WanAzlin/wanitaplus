@@ -4,7 +4,7 @@ import { Pressable, useColorScheme } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 import Colors from '../../constants/Colors';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 /**
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
@@ -56,7 +56,7 @@ export default function TabLayout() {
         name="sos"
         options={{
           title: 'SOS',
-          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="bell-circle" size={40} color={color} />,
+          tabBarIcon: ({ color }) => <FontAwesome5 name="biohazard" size={24} color={color} />,
         }}
       />
       <Tabs.Screen
@@ -73,6 +73,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <FontAwesome name="wechat" size={24} color={color} />,
         }}
       />
+      
     </Tabs>
   );
 }

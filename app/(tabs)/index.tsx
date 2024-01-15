@@ -2,6 +2,7 @@ import { StyleSheet, Image } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Text, View, } from '../../components/Themed';
 import { Entypo } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
 export default function TabOneScreen() {
   return (
     <ScrollView style={styles.scrollView}>
