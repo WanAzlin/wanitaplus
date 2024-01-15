@@ -8,6 +8,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 const cart = () => {
   return (
+    <ScrollView style={styles.scrollView}>
     <View style={styles.container}>
       <View style ={{flexDirection: "row"}}>
           <TextInput  placeholder='Search Item'  style={styles.TextInput}/>
@@ -15,48 +16,112 @@ const cart = () => {
       </View>
       <View style ={{flexDirection: "row"}}>
           <View style={styles.box3}>
-              <AntDesign name="filetext1" size={30} color="black"  style={styles.icon}/>
-               <Text style={styles.title1} >Orders</Text>
+          <AntDesign name="filetext1" size={30} color="black"  style={styles.icon}/>
+               <Text style={styles.title2} >Orders</Text>
           </View>
           <View style={styles.box3}>
           <MaterialCommunityIcons name="ticket-confirmation-outline" size={30} color="black"style={styles.icon1} />
-               <Text style={styles.title1} >Coupons</Text>
+               <Text style={styles.title2} >Coupons</Text>
           </View>
           <View style={styles.box3}>
           <Ionicons name="chatbubble-ellipses-outline" size={29} color="black" style={styles.icon1} />
-               <Text style={styles.title1} >Messages</Text>
+               <Text style={styles.title2} >Messages</Text>
 
           </View>
           <View style={styles.box3}>
           <Entypo name="location-pin" size={30} color="black" style={styles.icon1}  />
-               <Text style={styles.title1} >Address</Text>
+               <Text style={styles.title2} >Address</Text>
                
           </View>
           <View style={styles.box3}>
           <FontAwesome5 name="money-bill-wave" size={30} color="black" style={styles.icon1} />
-               <Text style={styles.title1} >Bonus </Text>
+               <Text style={styles.title2} >Bonus </Text>
           </View>
           </View>
+          <Text style={styles.title4}>Shops Today</Text>
+          <View style ={{flexDirection: "row"}}>
+          <View style={styles.box3}>
+              
+              <Image style={styles.fimg}
+               source={require("../../assets/images/fast-food.png")} />
+               <Text style={styles.title1} >Foods</Text>
+          </View>
+          <View style={styles.box3}>
+              
+              <Image style={styles.fimg}
+               source={require("../../assets/images/medicine.png")} />
+               <Text style={styles.title1} >Medicine</Text>
+          </View>
+          <View style={styles.box3}>
+              
+              <Image style={styles.fimg}
+               source={require("../../assets/images/cosmetics.png")} />
+               <Text style={styles.title1} >Cosmetics</Text>
+          </View>
+          <View style={styles.box3}>
+              
+              <Image style={styles.fimg}
+               source={require("../../assets/images/grocery.png")} />
+               <Text style={styles.title1} >Grocery</Text>
+          </View>
+          
+          </View>
+          <Text style={styles.title4}>E-Mart</Text>
+          <View style ={{flexDirection: "row"}}>
+          <View style={styles.box3}>
+              
+              <Image style={styles.fimg}
+               source={require("../../assets/images/telur.jpg")} />
+               <Text style={styles.title2} > RM7.90</Text>
+               <Text style={styles.title1} > Omega 3</Text>
+          </View>
+          <View style={styles.box3}>
+              
+              <Image style={styles.fimg}
+               source={require("../../assets/images/bawang.jpg")} />
+               <Text style={styles.title2} > RM4.30</Text>
+               <Text style={styles.title1} > Bawang</Text>
+          </View>
+          <View style={styles.box3}>
+              
+              <Image style={styles.fimg}
+               source={require("../../assets/images/susu.jpg")} />
+               <Text style={styles.title2} > RM9.90</Text>
+               <Text style={styles.title1} > Susu</Text>
+          </View>
+          <View style={styles.box3}>
+              
+              <Image style={styles.fimg}
+               source={require("../../assets/images/lemon.jpg")} />
+               <Text style={styles.title2} > RM3.90</Text>
+               <Text style={styles.title1} > Lemon</Text>
+          </View>
+          
+          </View>
+          <Text style={styles.title4}>Promotion</Text>
+          
           <ScrollView
           horizontal={true}
           showsHorizontalScrollIndicator={false}>
-          <View style={styles.box1}>
-             <Text style={styles.title10} >All</Text>
+          <View style={styles.box3}>
+            <Image style={styles.fimg1}
+               source={require("../../assets/images/promo.jpg")} />
+               
           </View>
-          <View style={styles.box2}>
-             <Text style={styles.title11} >Beauty</Text>
+          <View style={styles.box3}>
+          <Image style={styles.fimg1}
+               source={require("../../assets/images/promo.jpg")} />
+              
           </View>
-        
-          <View style={styles.box2}>
-             <Text style={styles.title11} >Kitchen</Text>
+          <View style={styles.box3}>
+          <Image style={styles.fimg1}
+               source={require("../../assets/images/promo.jpg")} />
+               
           </View>
-          <View style={styles.box2}>
-             <Text style={styles.title11} >Health</Text>
-          </View> 
         </ScrollView>
         
     </View>
-    
+    </ScrollView>
   )
 }
 
@@ -82,43 +147,57 @@ TextInput: {
   
 },
 cart:{
-marginLeft:10,
-marginTop:20,
+  marginLeft:10,
+  marginTop:20,
 },
 box3:{
-paddingTop:20,
-paddingLeft: 20,
+  paddingTop:20,
+  paddingLeft: 20,
 },
 fimg:{
-width: 140,
-height: 130,
-marginLeft: 10,
-marginBottom:300,
-borderRadius:  5,
+  width: 80,
+  height: 80,
+  marginLeft: 6,
+  marginTop: 14,
+
+},
+fimg1:{
+  width: 120,
+  height: 140,
+  marginLeft: 6,
+  marginTop: 5,
+
 },
 title1: {
-fontSize: 15,
+  fontSize: 15,
+  color: "#EF6E7A",
+  textAlign:'center',
+  paddingTop: 8,
 
-textAlign:'center',
-paddingTop: 10,
+},
+title2: {
+  fontSize: 15,
+  fontWeight:'bold',
+  textAlign:'center',
+  paddingTop: 10,
 
 },
 icon:{
-paddingLeft: 10,
+  paddingLeft: 10,
 },
 icon1:{
-paddingLeft: 12,
+  paddingLeft: 12,
 },
 title4: {
-fontSize: 25,
-fontWeight: 'bold',
-marginLeft: 15,
-marginBottom: 100,
+  fontSize: 25,
+  fontWeight: 'bold',
+  marginLeft: 15,
+  marginTop: 20,
 },
 box1:{
-borderWidth: 2,
-borderColor:"#EF6E7A",
-width: 75,
+  borderWidth: 2,
+  borderColor:"#EF6E7A",
+  width: 75,
 height: 40,
 borderRadius: 20,
 marginLeft: 10,
@@ -161,12 +240,20 @@ box5: {
   marginLeft: 10,
   alignSelf:'center',
   borderColor:'#000000',
-  backgroundColor: "#0F7AAE",
+  backgroundColor: "#EF6E7A",
   shadowRadius: 2,
   elevation: 5,
   borderRadius: 20,
   height: 240,
   width: 190,
-  marginBottom: 200,
+  marginBottom: 270,
+},
+boxGroup:{
+  backgroundColor: "#EF6E7A",
+  borderRadius: 20,
+  width: 400,
+  height: 180,
+  marginLeft: 10,
+  marginTop: 10,
 },
 })

@@ -24,11 +24,11 @@ const sos = () => {
             </View> 
         </View>
         <View style={styles.box}>
-        <Text style={styles.title1}>Cik Azlin</Text> 
+        <Text style={styles.title1}>Cik Azlin,</Text> 
         <Text style={styles.title2}>You are about to call emergency</Text> 
         <Text style={styles.title}>The call will start automatically in:</Text>
         <Text style={styles.title4}>05</Text> 
-        <Text style={styles.title}>Your location coordinates</Text>
+        <Text style={styles.title}>Your location coordinates:</Text>
         <Text style={styles.title5}> Jalan Sultan Hishamuddin 50050 Kuala Lumpur Federal Territory of Kuala Lumpur</Text> 
         <View style={styles.box1}>
             <Text style={styles.title6}>Cancel</Text> 

@@ -1,5 +1,6 @@
-import { StyleSheet, Text, View,TextInput, ScrollView, Image } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View,TextInput,  Image } from 'react-native'
+import React from 'react';
+import { ScrollView } from 'react-native-gesture-handler';
 import { Entypo } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -55,7 +56,7 @@ const cart = () => {
         </ScrollView>
         <View style ={{flexDirection: "row"}}>
         <View style={styles.box5}>
-
+        
         <Text style={styles.title11} >Health</Text>
         </View>
         <View style={styles.box5}>
@@ -98,11 +99,11 @@ paddingTop:20,
 paddingLeft: 20,
 },
 fimg:{
-width: 140,
+width: 180,
 height: 130,
-marginLeft: 10,
-marginBottom:300,
-borderRadius:  5,
+marginLeft: 6,
+marginTop: 14,
+
 },
 title1: {
 fontSize: 15,
@@ -169,12 +170,12 @@ box5: {
   marginLeft: 10,
   alignSelf:'center',
   borderColor:'#000000',
-  backgroundColor: "#0F7AAE",
+  backgroundColor: "#EF6E7A",
   shadowRadius: 2,
   elevation: 5,
   borderRadius: 20,
   height: 240,
   width: 190,
-  marginTop: 30,
+  marginBottom: 270,
 },
 })

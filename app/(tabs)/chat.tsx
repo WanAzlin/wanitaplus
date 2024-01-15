@@ -1,5 +1,9 @@
 import { StyleSheet, Text, View,Image, TextInput,Dimensions } from 'react-native'
 import React from 'react'
+import { AntDesign } from '@expo/vector-icons';
+import { SimpleLineIcons } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
+import { Fontisto } from '@expo/vector-icons';
 
 const channel2 = () => {
   return (
@@ -25,17 +29,12 @@ const channel2 = () => {
       </View>
       <Text style={styles.text5} >Sent 10:20 P.M.</Text>
       <View style ={{flexDirection: "row"}}>
-           <Image style={styles.emoimg}
-               source={require("../../assets/images/Photo.png")} />
-          <Image style={styles.emoimg}
-               source={require("../../assets/images/Shape.png")} />
-           <Image style={styles.emoimg}
-               source={require("../../assets/images/Audio.png")} />
+      <AntDesign name="camera" size={24} color="black" style={styles.emoimg}  />
+      <SimpleLineIcons name="picture" size={24} color="black" style={styles.emoimg}  />
+      <MaterialIcons name="keyboard-voice" size={24} color="black"  style={styles.emoimg}/>
           <TextInput  placeholder='Message'  style={styles.TextInput}/>
-          <Image style={styles.emoimg}
-               source={require("../../assets/images/Emoji.png")} />
-           <Image style={styles.emoimg}
-               source={require("../../assets/images/Like.png")} />
+          <Fontisto name="smiley" size={24} color="black" style={styles.emoimg} />
+          <AntDesign name="like1" size={24} color="black" style={styles.emoimg}/>
         </View>
       </View>
       
@@ -158,10 +157,10 @@ const styles = StyleSheet.create({
     borderRadius:  5,
   },
   emoimg:{
-    width: 20,
-    height: 20,
+    width: 25,
+    height: 25,
     marginTop: 80,
-    marginLeft: 20
+    marginLeft: 12
   },
   av1: {
     width: 30,
