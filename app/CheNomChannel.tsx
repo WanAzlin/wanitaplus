@@ -1,17 +1,19 @@
 import { StyleSheet, Text, View,Image } from 'react-native'
 import React from 'react'
-
+import { AntDesign } from '@expo/vector-icons';
 const channel2 = () => {
   return (
     <View  style={styles.container}>
       <View style={styles.box}>
       <View style ={{flexDirection: "row"}}>
             <View style={styles.live1}> 
+            
               <Text style={styles.tlive1} >Join</Text>
             </View>
             <View style={styles.live2}> 
             <Text style={styles.tlive2} >Report</Text>
             </View>
+            <AntDesign name="close" size={20} color="white" style={styles.close} />
       </View>
       <View style={styles.box1}>
       <Image style={styles.fimg}
@@ -32,7 +34,11 @@ const channel2 = () => {
                source={require("../assets/images/em2.png")} />
            <Image style={styles.emoimg}
                source={require("../assets/images/em3.png")} />
+          <Text style={styles.text5} >20</Text>
         </View>
+      </View>
+      <View style={styles.box3}>
+      <Text style={styles.text4} >unmute</Text>
       </View>
     </View>
   )
@@ -49,6 +55,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#EF6E7A",
     height: 60,
     
+  },
+  box3:{
+    backgroundColor: "#FFFFFF",
+    height: 70,
+    marginTop: 280,
   },
   live1:{
     
@@ -98,6 +109,18 @@ const styles = StyleSheet.create({
     paddingTop:40,
     color: "grey",
    },
+   text4:{
+    fontSize:15,
+   textAlign:'center',
+    paddingTop:10,
+    color: "#0F7AAE",
+   },
+   text5:{
+    fontSize:15,
+    marginLeft: 10,
+    paddingTop:6,
+    color: "#0F7AAE",
+   },
   box1: {
     
     alignSelf:'center',
@@ -112,10 +135,10 @@ const styles = StyleSheet.create({
   },
   box2: {
     height: 30,
-    width: 100,
+    width: 130,
     backgroundColor: "#FFFFFF",
-    marginTop: 370,
-    marginLeft: 20,
+    marginTop: 375,
+    marginLeft: 10,
     borderRadius: 20,
   },
   fimg:{
@@ -130,5 +153,9 @@ const styles = StyleSheet.create({
     height: 20,
     marginTop: 6,
     marginLeft: 10
+  },
+  close:{
+    marginLeft: 80,
+    marginTop: 5,
   },
 })
