@@ -3,13 +3,14 @@ import React from 'react';
 import { Link, Tabs } from 'expo-router';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { StyleSheet, Text, View,TextInput, Pressable, Image } from 'react-native'
-
+import { MaterialIcons } from '@expo/vector-icons';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Entypo } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
+
 const Tab = createMaterialTopTabNavigator();
 const tabs = () => {
   return (
@@ -139,17 +140,126 @@ const Market = () => {
 }
 const Services = () => {
   
-    return <View style={{flex: 1, backgroundColor: "#FFFFFF",  }} >
+    return <ScrollView style={styles.scrollView}>
+    <View style={styles.container}>
+    <Text style={styles.title4}>Services</Text> 
+    <Image style={styles.banner}
+               source={require("../../assets/images/b2.png")} />
       
-      <Text>Signup</Text>
-         
+      <ScrollView
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}>
+          <View style={styles.box1T2}>
+          <View style ={{flexDirection: "row"}}>
+          
+             <Text style={styles.title10T2} >All</Text>
+          </View>
+          </View>
+          <View style={styles.box2T}>
+          <View style ={{flexDirection: "row"}}>
+          <MaterialIcons name="cleaning-services" size={30} color="#EF6E7A" />
+             <Text style={styles.title10T} >Cleaning</Text>
+          </View>
+          </View>
+          <View style={styles.box2T}>
+          <View style ={{flexDirection: "row"}}>
+            
+             <AntDesign name="car" size={30} color="#EF6E7A"  style={styles.iconT} />
+             <Text style={styles.title11T2} >WDriver</Text>
+          </View> 
+          </View>
+        
+          <View style={styles.box2T}>
+          <View style ={{flexDirection: "row"}}>
+          <FontAwesome5 name="cat" size={30} color="#EF6E7A" style={styles.iconT} />
+            <Text style={styles.title11T21} >Pet Sitter</Text>
+         </View> 
+             
+          </View>
+          <View style={styles.box2T}>
+          <View style ={{flexDirection: "row"}}>
+          <MaterialIcons name="dry-cleaning" size={30} color="#EF6E7A" style={styles.iconT} />
+          <Text style={styles.title11T21} >Laundry</Text>
+         </View> 
+             
+          </View> 
+        </ScrollView>
+        <Text style={styles.title4}>Available Services</Text> 
+        <View style ={{flexDirection: "row"}}>
+        <View style={styles.boxC}>
+        <MaterialIcons name="cleaning-services" size={30} color="white" style={styles.iconS} />
+        </View>
+        <Text style={styles.title5}>Cleaning</Text> 
+        <Text style={styles.title7}>60/hr</Text> 
+        </View>
+        <View style ={{flexDirection: "row"}}>
+        
+        <Text style={styles.title6}>Tomorrow</Text> 
+        </View>
+        <View style ={{flexDirection: "row"}}>
+        <View style={styles.boxD}>
+        <AntDesign name="car" size={30} color="white"  style={styles.iconS} />
+        </View>
+        <Text style={styles.title5}>Driver</Text> 
+        <Text style={styles.title71}>60/hr</Text> 
+        </View>
+        <View style ={{flexDirection: "row"}}>
+        
+        <Text style={styles.title6}>Tomorrow</Text> 
+        </View>
+        <View style ={{flexDirection: "row"}}>
+        <View style={styles.boxC}>
+        <FontAwesome5 name="cat" size={30} color="white" style={styles.iconS} />
+        </View>
+        <Text style={styles.title5}>Cat-Sitter</Text> 
+        <Text style={styles.title7}>60/hr</Text> 
+        </View>
+        <View style ={{flexDirection: "row"}}>
+        
+        <Text style={styles.title6}>Tomorrow</Text> 
+        </View>
+        <View style ={{flexDirection: "row"}}>
+        <View style={styles.boxC}>
+        <MaterialIcons name="dry-cleaning" size={30} color="white" style={styles.iconS} />
+        </View>
+        <Text style={styles.title5}>Laundry</Text> 
+        <Text style={styles.title7}>60/hr</Text> 
+        </View>
+        <View style ={{flexDirection: "row"}}>
+        
+        <Text style={styles.title6}>Tomorrow</Text> 
+        </View>
+        
     </View>
+    </ScrollView>
 
 }
 export default tabs
 
 const styles = StyleSheet.create({
-
+  container: {
+    flex: 1,
+    backgroundColor: "#FFFFFF"
+  },
+  boxC:{
+    backgroundColor: "#EF6E7A",
+    width: 50,
+    height: 50,
+    marginLeft: 10,
+    marginTop: 10,
+    borderRadius: 100,
+  },
+  boxD:{
+    backgroundColor: "#EF6E7A",
+    width: 50,
+    height: 50,
+    marginLeft: 10,
+    marginTop: 10,
+    borderRadius: 100,
+  },
+  iconT:{
+    marginLeft: 10,
+  },
   iC2: {
     width: 60,
     height: 60,
@@ -175,11 +285,7 @@ const styles = StyleSheet.create({
     paddingTop: 8,
     paddingLeft: 10,
   },
-  container: {
-    flex: 1,
-    backgroundColor: "#FFFFFF",
-    
-  },
+  
  
 TextInput: {
   borderWidth: 1,
@@ -241,24 +347,48 @@ title4: {
   marginLeft: 15,
   marginTop: 20,
 },
+title5: {
+  fontSize: 20,
+  fontWeight: 'bold',
+  marginLeft: 15,
+  marginTop: 20,
+},
+title6: {
+  fontSize: 15,
+  color: 'grey',
+  marginLeft: 75,
+  marginTop: 2,
+},
+title7: {
+  fontSize: 15,
+  color: 'grey',
+  marginLeft: 185,
+  marginTop: 23,
+},
+title71: {
+  fontSize: 15,
+  color: 'grey',
+  marginLeft: 214,
+  marginTop: 23,
+},
 box1:{
   borderWidth: 2,
   borderColor:"#EF6E7A",
   width: 75,
-height: 40,
-borderRadius: 20,
-marginLeft: 10,
-marginTop: 20,
-backgroundColor: "#EF6E7A",
+  height: 40,
+  borderRadius: 20,
+  marginLeft: 10,
+  marginTop: 20,
+  backgroundColor: "#EF6E7A",
 },
 box2:{
-borderWidth: 2,
-borderColor:"#EF6E7A",
-width: 100,
-height: 40,
-borderRadius: 20,
-marginLeft: 10,
-marginTop: 20,
+  borderWidth: 2,
+  borderColor:"#EF6E7A",
+  width: 100,
+  height: 40,
+  borderRadius: 20,
+  marginLeft: 10,
+  marginTop: 20,
 
 },
 box4:{
@@ -303,4 +433,76 @@ boxGroup:{
   marginLeft: 10,
   marginTop: 10,
 },
+box1T:{
+  borderWidth: 2,
+  borderColor:"#EF6E7A",
+  width: 130,
+  height: 40,
+  borderRadius: 20,
+  marginLeft: 10,
+  marginTop: 10,
+  backgroundColor: "#EF6E7A",
+},
+box1T2:{
+  borderWidth: 2,
+  borderColor:"#EF6E7A",
+  width: 80,
+  height: 40,
+  borderRadius: 20,
+  marginLeft: 10,
+  marginTop: 10,
+  backgroundColor: "#EF6E7A",
+},
+box2T:{
+  borderWidth: 2,
+  borderColor:"#EF6E7A",
+  width: 140,
+  height: 40,
+  borderRadius: 20,
+  marginLeft: 10,
+  marginTop: 10,
+  
+},
+title10T: {
+  fontSize: 20,
+  color:"#EF6E7A",
+  marginLeft: 3,
+  paddingTop: 5,
+},
+title10T2: {
+  fontSize: 20,
+  color:"white",
+  marginLeft: 23,
+  paddingTop: 5,
+},
+title11T: {
+  fontSize: 20,
+  color:"#EF6E7A",
+  marginLeft: 20,
+  paddingTop: 5,
+},
+title11T21: {
+  fontSize: 20,
+  color:"#EF6E7A",
+  marginLeft: 8,
+  paddingTop: 5,
+},
+title11T2: {
+  fontSize: 20,
+  color:"#EF6E7A",
+  marginLeft: 12,
+  paddingTop: 5,
+},
+banner:{
+  width: 400,
+  height: 180,
+  alignSelf: 'center',
+  borderRadius: 10,
+  marginTop: 10,
+  marginBottom: 10,
+},
+iconS:{
+  marginLeft: 10,
+  marginTop: 10,
+}
 });
