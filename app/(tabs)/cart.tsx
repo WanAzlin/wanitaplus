@@ -1,14 +1,28 @@
-import { StyleSheet, Text, View,TextInput,  Image } from 'react-native'
+
 import React from 'react';
+import { Link, Tabs } from 'expo-router';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { StyleSheet, Text, View,TextInput, Pressable, Image } from 'react-native'
+
 import { ScrollView } from 'react-native-gesture-handler';
 import { Entypo } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
-const cart = () => {
+const Tab = createMaterialTopTabNavigator();
+const tabs = () => {
   return (
-    <ScrollView style={styles.scrollView}>
+    <Tab.Navigator>
+      <Tab.Screen name="E-Market" component={Market} />
+      <Tab.Screen name="Services" component={Services} />
+    </Tab.Navigator>
+  )
+};
+
+const Market = () => {
+  
+    return <ScrollView style={styles.scrollView}>
     <View style={styles.container}>
       <View style ={{flexDirection: "row"}}>
           <TextInput  placeholder='Search Item'  style={styles.TextInput}/>
@@ -122,12 +136,45 @@ const cart = () => {
         
     </View>
     </ScrollView>
-  )
 }
+const Services = () => {
+  
+    return <View style={{flex: 1, backgroundColor: "#FFFFFF",  }} >
+      
+      <Text>Signup</Text>
+         
+    </View>
 
-export default cart
+}
+export default tabs
 
 const styles = StyleSheet.create({
+
+  iC2: {
+    width: 60,
+    height: 60,
+    marginLeft: 15,
+    marginTop:18,
+    borderRadius: 50,
+  },
+  title13: {
+    fontSize: 13,
+    paddingLeft: 10,
+   
+    paddingTop: 35,
+    
+  },
+  title14: {
+    fontSize: 13,
+    paddingLeft: 340,
+    color: 'grey',
+    paddingBottom: 12,
+    
+  },
+  plus:{
+    paddingTop: 8,
+    paddingLeft: 10,
+  },
   container: {
     flex: 1,
     backgroundColor: "#FFFFFF",
@@ -256,4 +303,4 @@ boxGroup:{
   marginLeft: 10,
   marginTop: 10,
 },
-})
+});

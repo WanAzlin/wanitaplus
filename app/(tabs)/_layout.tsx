@@ -65,7 +65,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="cart"
         options={{
-          title: 'Shop',
+          title: 'GIG Economy',
           tabBarIcon: ({ color }) => <Entypo name="shopping-cart" size={24} color={color} />,
         }}
       />

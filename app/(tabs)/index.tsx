@@ -1,15 +1,23 @@
-import { StyleSheet, Image } from 'react-native';
+import { StyleSheet, Image, Pressable } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Text, View, } from '../../components/Themed';
 import { Entypo } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { Link, Tabs } from 'expo-router';
 export default function TabOneScreen() {
   return (
     <ScrollView style={styles.scrollView}>
     <View style={styles.container}>
       <View style ={{flexDirection: "row"}}>
-      <Image style={styles.iC2}
-               source={require("../../assets/images/alin.jpg")} /> 
+      <Link href="/intro" asChild>
+            <Pressable>
+                {({ pressed }) => (
+                       <Image style={styles.iC2}
+                       source={require("../../assets/images/alin.jpg")} /> 
+            )}
+            </Pressable>
+            </Link>
+
         <Text style={styles.title}>Welcome, Wan Azlin</Text>
       
       </View>
@@ -44,6 +52,8 @@ export default function TabOneScreen() {
                source={require("../../assets/images/av13.png")} />
           <Image style={styles.av2}
                source={require("../../assets/images/av15.png")} />
+          <Image style={styles.av2}
+               source={require("../../assets/images/av16.png")} />
           </View>
           </View>
           <View style={styles.boxGroup}>
@@ -66,6 +76,8 @@ export default function TabOneScreen() {
                source={require("../../assets/images/av13.png")} />
           <Image style={styles.av2}
                source={require("../../assets/images/av15.png")} />
+          <Image style={styles.av2}
+               source={require("../../assets/images/av16.png")} />
           </View>
         </View>
      </ScrollView>
@@ -110,8 +122,16 @@ export default function TabOneScreen() {
           </View>
         </ScrollView>
         <Text style={styles.title4}>Be More Than Superwomen</Text>
-        <Image style={styles.banner1}
+        <ScrollView
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}>
+          <Image style={styles.banner1}
                source={require("../../assets/images/women.png")} />
+       
+           <Image style={styles.banner1}
+               source={require("../../assets/images/fr3.png")} />
+        </ScrollView>
+       
         <Text style={styles.title4}>Our Certified Buddies</Text>
         <ScrollView
           horizontal={true}
@@ -241,6 +261,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     borderRadius: 10,
     marginTop: 10,
+    marginLeft: 10,
   },
   group:{
     marginTop: 10,
