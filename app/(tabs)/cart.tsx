@@ -23,7 +23,7 @@ const tabs = () => {
 
 const Market = () => {
   
-    return <ScrollView style={styles.scrollView}>
+    return <ScrollView >
     <View style={styles.container}>
       <View style ={{flexDirection: "row"}}>
           <TextInput  placeholder='Search Item'  style={styles.TextInput}/>
@@ -140,7 +140,7 @@ const Market = () => {
 }
 const Services = () => {
   
-    return <ScrollView style={styles.scrollView}>
+    return <ScrollView >
     <View style={styles.container}>
     <Text style={styles.title4}>Services</Text> 
     <Image style={styles.banner}
@@ -157,7 +157,7 @@ const Services = () => {
           </View>
           <View style={styles.box2T}>
           <View style ={{flexDirection: "row"}}>
-          <MaterialIcons name="cleaning-services" size={30} color="#EF6E7A" />
+          <MaterialIcons name="cleaning-services" size={30} color="#EF6E7A" style={styles.iconT}  />
              <Text style={styles.title10T} >Cleaning</Text>
           </View>
           </View>
@@ -223,7 +223,7 @@ const Services = () => {
         <MaterialIcons name="dry-cleaning" size={30} color="white" style={styles.iconS} />
         </View>
         <Text style={styles.title5}>Laundry</Text> 
-        <Text style={styles.title7}>60/hr</Text> 
+        <Text style={styles.title7T}>60/hr</Text> 
         </View>
         <View style ={{flexDirection: "row"}}>
         
@@ -362,13 +362,19 @@ title6: {
 title7: {
   fontSize: 15,
   color: 'grey',
-  marginLeft: 185,
+  marginLeft: 180,
   marginTop: 23,
 },
 title71: {
   fontSize: 15,
   color: 'grey',
   marginLeft: 214,
+  marginTop: 23,
+},
+title7T: {
+  fontSize: 15,
+  color: 'grey',
+  marginLeft: 195,
   marginTop: 23,
 },
 box1:{
@@ -466,7 +472,7 @@ box2T:{
 title10T: {
   fontSize: 20,
   color:"#EF6E7A",
-  marginLeft: 3,
+  marginLeft: 10,
   paddingTop: 5,
 },
 title10T2: {

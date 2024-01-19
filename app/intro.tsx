@@ -4,7 +4,7 @@ import { Link,  } from 'expo-router';
 export default function Intro() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>The safe go-to-place for</Text>
+      <Text style={styles.title}>The safe go-to place for</Text>
        <Text style={styles.title1}>Women</Text>
       <Image style={styles.pic1}
         source={require("../assets/images/img1.png")} />

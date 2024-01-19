@@ -37,16 +37,20 @@ export default function TabLayout() {
                 {({ pressed }) => (
                   
                   <FontAwesome
-                    name="bell"
+                  name="wechat"
                     size={25}
                     color={Colors[colorScheme ?? 'light'].text}
                     style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
                   />
+                  
                 )}
               </Pressable>
             </Link>
+            
           ),
+          
         }}
+        
       />
       <Tabs.Screen
         name="two"
@@ -72,8 +76,8 @@ export default function TabLayout() {
       <Tabs.Screen
         name="chat"
         options={{
-          title: 'Chat',
-          tabBarIcon: ({ color }) => <FontAwesome name="wechat" size={24} color={color} />,
+          title: 'MeTime',
+          tabBarIcon: ({ color }) => <FontAwesome5 name="studiovinari" size={24} color={color} />,
         }}
       />
       
