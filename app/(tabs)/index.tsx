@@ -127,9 +127,15 @@ export default function TabOneScreen() {
           showsHorizontalScrollIndicator={false}>
           <Image style={styles.banner1}
                source={require("../../assets/images/women.png")} />
-       
-           <Image style={styles.banner1}
-               source={require("../../assets/images/fr3.png")} />
+        <Link href="/buddies" asChild>
+            <Pressable>
+                {({ pressed }) => (
+                     <Image style={styles.banner1}
+                     source={require("../../assets/images/fr3.png")} />
+            )}
+            </Pressable>
+            </Link>
+          
         </ScrollView>
        
         <Text style={styles.title4}>Our Certified Buddies</Text>
